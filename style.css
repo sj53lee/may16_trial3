@@ -1,0 +1,68 @@
+@import "node_modules/ol/ol.css";
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Layer switcher  */
+.dropdown-menu li {
+  padding: 3px 10px;
+}
+.dropdown-menu li:hover {
+  background-color: rgb(194, 190, 190);
+}
+.dropdown-menu li{
+  margin-inline-start: relative;
+  margin-block: relative;
+  margin-inline-end: relative;
+  text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.legend {
+  display: none;
+}
+
+.dropdown {
+  top: 170px;
+  left: 0.5em;
+}
+/* Opacity for layer swithcer */
+.opacitylabel{
+  font-size: 10px;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+.opacitybar{
+  height:6px;
+  margin-left: 1px;
+}
+
+/* basemap switcher */
+.dropdown-menu menuB li:hover {
+  background-color: rgb(172, 166, 177);
+}
+
+.dropdown-menuB menuB li {
+  font-size: small;
+  display: inline-block;
+  text-align: center;
+  padding: 5px;
+}
+
+.dropdown-menuB menuB {
+  padding: 20px;
+  background-color: rgb(229, 238, 235);
+}
+.dropdown2 {
+  top: 200px;
+  left: 0.5em;
+}
