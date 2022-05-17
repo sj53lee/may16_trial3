@@ -26,12 +26,12 @@ class basemapSwitcher extends Control{
             id: "dropdownMenuButton",
             ariaExpanded: "false",
         })
-        button2.setAttribute("data-toggle", "dropdown");
+        button2.setAttribute("data-bs-toggle", "dropdown");
     
         button2.innerHTML='B';
 
         const dropdownB = document.createElement('div');
-        dropdownB.className = 'dropdown dropdown2 dropright ol-unselectable ol-control';
+        dropdownB.className = 'dropdown2 ol-unselectable ol-control';
         dropdownB.appendChild(button2);
 
         const dropdownMenuB = document.createElement('ul');

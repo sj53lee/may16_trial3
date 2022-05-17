@@ -37,11 +37,11 @@ class layerSwitcher extends Control{
           id: "dropdownMenuButton",
           ariaExpanded: "false",
       })
-      button.setAttribute("data-toggle", "dropdown");
+      button.setAttribute("data-bs-toggle", "dropdown");
       button.innerHTML="L";
   
       const dropdown = document.createElement('div');
-      dropdown.className="dropdown ol-unselectable ol-control dropright";
+      dropdown.className="dropdown1 ol-unselectable ol-control";
       dropdown.appendChild(button);
 
       const dropdownMenu = document.createElement('ul');

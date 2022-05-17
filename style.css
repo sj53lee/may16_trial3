@@ -30,7 +30,7 @@ html, body {
   display: none;
 }
 
-.dropdown {
+.dropdown1 {
   top: 170px;
   left: 0.5em;
 }
@@ -64,5 +64,11 @@ html, body {
 }
 .dropdown2 {
   top: 200px;
+  left: 0.5em;
+}
+
+/* Locate user tool */
+.locate {
+  top: 100px;
   left: 0.5em;
 }
