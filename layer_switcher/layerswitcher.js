@@ -61,7 +61,7 @@ class layerSwitcher extends Control{
       });
 
       Object.assign(dropdownContent,{
-          className: "medium",
+          className: "medium contentlabel",
           href: "#",
           value: "layer1",
           id: "layer1",
@@ -109,7 +109,7 @@ class layerSwitcher extends Control{
      })
 
      Object.assign(dropdownContent2,{
-         className:"medium",
+         className:"medium contentlabel",
          href: "#",
          value: "layer2",
          id: "layer2",
@@ -155,7 +155,7 @@ class layerSwitcher extends Control{
       })
 
       Object.assign(dropdownContent3,{
-          className:"medium",
+          className:"medium contentlabel",
           href: "#",
           value: "layer3",
           id: "layer3",
@@ -201,7 +201,7 @@ class layerSwitcher extends Control{
     })
 
     Object.assign(dropdownContent4,{
-        className:"medium",
+        className:"medium contentlabel",
         href: "#",
         value: "layer4",
         id: "layer4",
@@ -340,7 +340,19 @@ class layerSwitcher extends Control{
               }
             }
         }
-      
+      // set parameters checkbox toggler
+      const inputParamCheckbox = [
+        [dropdownCheck, layer1, dropdownLegend],
+        [dropdownCheck2, layer2, dropdownLegend2],
+        [dropdownCheck3, layer3, dropdownLegend3],
+        [dropdownCheck4, layer4, dropdownLegend4]
+      ]
+
+      // initiate the function
+      inputParamCheckbox.forEach(function(entry){
+        checkboxToggler.apply(null, entry)
+      })
+
       // Connect opacity to layers
       const opacityToggler = function(opacityIn, layer){
         // When you change the value of the opacity, set the opacity level to that value
@@ -348,17 +360,18 @@ class layerSwitcher extends Control{
           const opac = parseFloat(opacityIn.value);
           layer.setOpacity(opac)
         }
-      }
-      opacityToggler(opacityInput, layer1);
-      opacityToggler(opacityInput2, layer2);
-      opacityToggler(opacityInput3, layer3);
-      opacityToggler(opacityInput4, layer4);
-
-    // Initiate checkbox toggler
-    checkboxToggler(dropdownCheck, layer1, dropdownLegend);
-    checkboxToggler(dropdownCheck2, layer2, dropdownLegend2);
-    checkboxToggler(dropdownCheck3, layer3, dropdownLegend3);
-    checkboxToggler(dropdownCheck4, layer4, dropdownLegend4);
+      };
+      // set parameters for our function
+      const inputParamOpacity = [
+        [opacityInput, layer1],
+        [opacityInput2, layer2],
+        [opacityInput3, layer3],
+        [opacityInput4, layer4]
+      ]
+      // loop through to call out the function for each parameter
+      inputParamOpacity.forEach(function(entry){
+        opacityToggler.apply(null, entry)
+      })
     }
 }
 

@@ -12,8 +12,9 @@ html, body {
 }
 
 /* Layer switcher  */
-.dropdown-menu li {
-  padding: 3px 10px;
+
+.contentlabel {
+  text-decoration: none;
 }
 .dropdown-menu li:hover {
   background-color: rgb(194, 190, 190);
@@ -25,6 +26,8 @@ html, body {
   text-align: left;
   overflow: hidden;
   white-space: nowrap;
+  padding: 3px 10px;
+  text-decoration: none;
 }
 .legend {
   display: none;
@@ -34,7 +37,7 @@ html, body {
   top: 170px;
   left: 0.5em;
 }
-/* Opacity for layer swithcer */
+/* Opacity for layer switcher */
 .opacitylabel{
   font-size: 10px;
   font-weight: bold;
